@@ -14,12 +14,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val viewModel by lazy { ViewModelProviders.of(this).get(MainViewModel::class.java) }
+    private val ledStrip by lazy { LedStrip() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i(TAG, "onCreate")
+        lifecycle.addObserver(ledStrip)
+
         viewModel.decibelsLiveData.observe(this, Observer { decibels ->
-            Log.i(TAG, "Decibels: ${String.format(Locale.getDefault(), "%.2f", decibels)}")
+            Log.i(TAG, "Decibels: ${String.format(Locale.getDefault(), "%.2f", decibels!!)}")
+            ledStrip.showDecibels(decibels)
         })
     }
 }

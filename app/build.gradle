@@ -32,4 +32,6 @@ dependencies {
 
     implementation "android.arch.lifecycle:extensions:$arch_version"
     annotationProcessor "android.arch.lifecycle:compiler:$arch_version"
+
+    implementation 'com.google.android.things.contrib:driver-apa102:0.5'
 }

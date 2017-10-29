@@ -9,7 +9,7 @@ import android.util.Log
 import java.io.IOException
 import java.lang.RuntimeException
 
-class DecibelsLiveData(private val frequencyMs: Long = 1000) : LiveData<Float>() {
+class DecibelsLiveData(private val frequencyMs: Long = 250) : LiveData<Float>() {
 
     companion object {
         private val TAG = DecibelsLiveData::class.java.simpleName!!
