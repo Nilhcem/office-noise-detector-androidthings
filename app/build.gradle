@@ -3,11 +3,11 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.0'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId 'com.nilhcem.officenoisedetector'
-        minSdkVersion 26
+        minSdkVersion 27
         targetSdkVersion 27
         versionCode 1
         versionName '1.0'
@@ -21,11 +21,11 @@ android {
     }
 }
 
-ext.arch_version = '1.0.0-rc1'
-ext.support_version = '27.0.0'
+ext.arch_version = '1.1.0'
+ext.support_version = '27.1.0'
 
 dependencies {
-    compileOnly 'com.google.android.things:androidthings:0.5.1-devpreview'
+    compileOnly 'com.google.android.things:androidthings:0.7-devpreview'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     implementation "com.android.support:appcompat-v7:$support_version"
@@ -33,5 +33,5 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$arch_version"
     annotationProcessor "android.arch.lifecycle:compiler:$arch_version"
 
-    implementation 'com.google.android.things.contrib:driver-apa102:0.5'
+    implementation 'com.google.android.things.contrib:driver-apa102:0.6'
 }
