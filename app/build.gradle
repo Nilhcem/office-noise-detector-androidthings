@@ -21,11 +21,11 @@ android {
     }
 }
 
-ext.arch_version = '1.1.0'
-ext.support_version = '27.1.0'
+ext.arch_version = '1.1.1'
+ext.support_version = '27.1.1'
 
 dependencies {
-    compileOnly 'com.google.android.things:androidthings:0.7-devpreview'
+    compileOnly 'com.google.android.things:androidthings:1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation "com.android.support:appcompat-v7:$support_version"
@@ -33,5 +33,5 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$arch_version"
     annotationProcessor "android.arch.lifecycle:compiler:$arch_version"
 
-    implementation 'com.google.android.things.contrib:driver-apa102:0.6'
+    implementation 'com.google.android.things.contrib:driver-apa102:1.0'
 }
